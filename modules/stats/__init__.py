@@ -16,21 +16,21 @@ def getserial():
 
 @cbpi.initalizer(order=9999)
 def sendStats(cbpi):
-
-    try:
-        serial = getserial()
-
-        info = {
-        "id": serial,
-        "version": "3.0",
-        "kettle": len(cbpi.cache.get("kettle")),
-        "hardware": len(cbpi.cache.get("actors")),
-        "thermometer": "CBP3.0",
-        "hardware_control": "CBP3.0"
-        }
-
-        import requests
-        r = requests.post('http://statistics.craftbeerpi.com', json=info)
-
-    except Exception as e:
-        pass
+    pass
+    # try:
+    #     serial = getserial()
+    # 
+    #     info = {
+    #     "id": serial,
+    #     "version": "3.0",
+    #     "kettle": len(cbpi.cache.get("kettle")),
+    #     "hardware": len(cbpi.cache.get("actors")),
+    #     "thermometer": "CBP3.0",
+    #     "hardware_control": "CBP3.0"
+    #     }
+    #
+    #     import requests
+    #     r = requests.post('http://statistics.craftbeerpi.com', json=info)
+    #
+    # except Exception as e:
+    #     pass
