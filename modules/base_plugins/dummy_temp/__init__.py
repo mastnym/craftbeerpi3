@@ -28,7 +28,7 @@ class DummyTempSensor(SensorActive):
 
     @cbpi.action("Toogle Up/Down")
     def toogle(self):
-        self.inc *= -1
+        self.inc = float(self.inc) * -1
 
     def stop(self):
         SensorActive.stop(self)
