@@ -2,7 +2,7 @@ import sqlite3
 import os
 from flask import json, g
 
-db_root=os.getenv("DB_ROOT", "")
+db_root=os.getenv("DB_ROOT", ".")
 db_location=db_root + '/craftbeerpi.db'
 
 def get_db():
